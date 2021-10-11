@@ -4,7 +4,7 @@ This Repository helps to you learn with their first successful pull request and 
 
 <a href="https://github.com/Jai54/Hacktoberfest---2021/"><img align='center' height="30" src="https://img.shields.io/badge/Hacktoberfest-2021-orange.svg?&style=for-the-badge&logo=KD&logoColor=blue" /></a> <br><br>
 
-<p align="center"><img src="https://github.com/Saradyadav/HacktoberFest_2021/blob/main/Hacktoberfest_2021.jpg" alt="Web Developement Image" width=850px />
+<p align="center"><img src="https://github.com/Jai54/Hacktoberfest---2021/blob/main/Hacktoberfest_2021.jpg" alt="Web Developement Image" width=850px />
  
 :star: Register for Hacktoberfest: Navigate to the [Hacktoberfest registration page](https://hacktoberfest.digitalocean.com/) and follow the instructions. But, read the rules carefully before you do and then sign In using your GitHub credentials.
 
@@ -38,6 +38,6 @@ To qualify for the __official limited edition Hacktoberfest shirt__, you must re
 
 ## Swags Like: 
 
-<p align="center"><img src="https://github.com/Saradyadav/HacktoberFest_2021/blob/main/hf.jpeg" alt="Web Developement Image" width=850px />
+<p align="center"><img src="https://github.com/Jai54/Hacktoberfest---2021/blob/main/hf.jpeg" alt="Web Developement Image" width=850px />
 
 
