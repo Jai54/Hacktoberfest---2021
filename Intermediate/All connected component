@@ -1,0 +1,113 @@
+Code : All connected components
+
+
+Constraints :
+2 <= V <= 1000
+1 <= E <= 1000
+Sample Input 1:
+4 2
+0 1
+2 3
+Sample Output 1:
+0 1 
+2 3 
+Sample Input 2:
+4 3
+0 1
+1 3 
+0 3
+Sample Output 2:
+0 1 3 
+2
+
+
+//solution
+#include <iostream>
+#include<algorithm>
+using namespace std;
+#include<vector>
+
+void findpath_DFS(int **matrix,int p1,bool *visited,int n,vector<int>* path)
+{
+    /*
+	if(visited[p1]==true)
+	{
+		vector<int> *path=new vector<int>();
+		path->push_back(p1);
+		return path;
+	}*/
+	path->push_back(p1);
+	visited[p1]=true;
+	for(int i=0;i<n;i++)
+	{
+		if(p1==i)
+		continue;
+		if(matrix[p1][i]==1&&visited[i]!=true)
+		{
+			findpath_DFS(matrix,i,visited,n,path);
+		 }
+	}
+}
+
+
+
+void DFS(int **matrix,int n)
+{
+	bool *visited=new bool[n];
+	for(int i=0;i<n;i++)
+	{
+		visited[i]=false;
+		
+	}
+	vector<vector<int>*> *out=new vector<vector<int>*>(); // write *  inside template
+	for(int i=0;i<n;i++)
+    {
+		if(visited[i]==false){
+	     vector<int> *path=new vector<int>(); 
+        findpath_DFS(matrix,i,visited,n,path); // pass path to function
+            if(path!=NULL)
+            {
+                sort(path->begin(),path->end()); // sorting of path
+                out->push_back(path);
+            }
+        }
+    
+	}
+    for(int i=0;i<out->size();i++)   // use -> operator
+    {
+        for(int j=0;j<out->at(i)->size();j++)
+        {
+            cout<<out->at(i)->at(j)<<" ";   // use -> operator
+        }
+        cout<<endl;
+    }
+}
+
+int main()
+{
+  int v,e;
+    cin>>v>>e;
+    
+    int **matrix=new int*[v];
+	for(int i=0;i<v;i++)
+	{
+		matrix[i]=new int[v];
+		for(int j=0;j<v;j++)
+		{
+			matrix[i][j]=0;
+		}
+	}
+	
+	for(int i=0;i<e;i++)
+	{
+		
+		int f,s;
+		cin>>f>>s;
+		matrix[f][s]=1;
+		matrix[s][f]=1;
+	}
+   DFS(matrix,v);
+  
+  return 0;
+}
+
